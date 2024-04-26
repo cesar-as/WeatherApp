@@ -19,6 +19,9 @@
 		B052CC0F2BDB01FB00873DC7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B052CC0E2BDB01FB00873DC7 /* Location.swift */; };
 		B052CC112BDB03E600873DC7 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B052CC102BDB03E600873DC7 /* CurrentWeather.swift */; };
 		B052CC132BDB044200873DC7 /* WeatherCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B052CC122BDB044200873DC7 /* WeatherCondition.swift */; };
+		B0DD29202BDB185300B5E2ED /* Network in Frameworks */ = {isa = PBXBuildFile; productRef = B0DD291F2BDB185300B5E2ED /* Network */; };
+		B0DD29222BDBBB1700B5E2ED /* CurrentWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD29212BDBBB1700B5E2ED /* CurrentWeatherData.swift */; };
+		B0DD29242BDBCA1F00B5E2ED /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD29232BDBCA1F00B5E2ED /* APIConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,8 @@
 		B052CC0E2BDB01FB00873DC7 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		B052CC102BDB03E600873DC7 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		B052CC122BDB044200873DC7 /* WeatherCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCondition.swift; sourceTree = "<group>"; };
+		B0DD29212BDBBB1700B5E2ED /* CurrentWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherData.swift; sourceTree = "<group>"; };
+		B0DD29232BDBCA1F00B5E2ED /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0DD29202BDB185300B5E2ED /* Network in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +168,7 @@
 			children = (
 				B052CC0D2BDB014F00873DC7 /* Model */,
 				B052CC0A2BDB002900873DC7 /* Provider */,
+				B0DD29232BDBCA1F00B5E2ED /* APIConstants.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -180,6 +187,7 @@
 				B052CC0E2BDB01FB00873DC7 /* Location.swift */,
 				B052CC102BDB03E600873DC7 /* CurrentWeather.swift */,
 				B052CC122BDB044200873DC7 /* WeatherCondition.swift */,
+				B0DD29212BDBBB1700B5E2ED /* CurrentWeatherData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -200,6 +208,9 @@
 			dependencies = (
 			);
 			name = WeatherApp;
+			packageProductDependencies = (
+				B0DD291F2BDB185300B5E2ED /* Network */,
+			);
 			productName = WeatherApp;
 			productReference = B052CBD22BDAF9AC00873DC7 /* WeatherApp.app */;
 			productType = "com.apple.product-type.application";
@@ -273,7 +284,7 @@
 			);
 			mainGroup = B052CBC92BDAF9AC00873DC7;
 			packageReferences = (
-				B052CC082BDAFF7900873DC7 /* XCLocalSwiftPackageReference "../Packages/Network" */,
+				B0DD291E2BDB185300B5E2ED /* XCLocalSwiftPackageReference "../Packages/Network" */,
 			);
 			productRefGroup = B052CBD32BDAF9AC00873DC7 /* Products */;
 			projectDirPath = "";
@@ -317,10 +328,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0DD29222BDBBB1700B5E2ED /* CurrentWeatherData.swift in Sources */,
 				B052CBDA2BDAF9AC00873DC7 /* HomeViewController.swift in Sources */,
 				B052CC132BDB044200873DC7 /* WeatherCondition.swift in Sources */,
 				B052CBD62BDAF9AC00873DC7 /* AppDelegate.swift in Sources */,
 				B052CC112BDB03E600873DC7 /* CurrentWeather.swift in Sources */,
+				B0DD29242BDBCA1F00B5E2ED /* APIConstants.swift in Sources */,
 				B052CBD82BDAF9AC00873DC7 /* SceneDelegate.swift in Sources */,
 				B052CC0F2BDB01FB00873DC7 /* Location.swift in Sources */,
 				B052CC0C2BDB00B200873DC7 /* WeatherProvider.swift in Sources */,
@@ -674,11 +687,18 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		B052CC082BDAFF7900873DC7 /* XCLocalSwiftPackageReference "../Packages/Network" */ = {
+		B0DD291E2BDB185300B5E2ED /* XCLocalSwiftPackageReference "../Packages/Network" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Packages/Network;
 		};
 /* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B0DD291F2BDB185300B5E2ED /* Network */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Network;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B052CBCA2BDAF9AC00873DC7 /* Project object */;
 }
